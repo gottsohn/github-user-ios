@@ -9,7 +9,7 @@
 A basic iOS Application used to fetch and display a list of repos belonging to a GitHub user.
 The application was built during the iOS Webinar Hosted by [Stutern](http://stutern.com) and [Max](http://max.ng) featuring [Godson Ukpere](http://gottsohn.github.io).
 
-Here's are the [slides](https://docs.google.com/presentation/d/1dfKkVaptjhiuyIlQgpmlrxPJ8Fxm8Qg1fBQ072x9XTM/edit#slide=id.g147dbbaa94_0_16) for the Webinar.
+Here's are the [slides](https://docs.google.com/presentation/d/1dfKkVaptjhiuyIlQgpmlrxPJ8Fxm8Qg1fBQ072x9XTM) for the Webinar.
 
 
 [swift-image]: https://img.shields.io/badge/Swift-2.2-orange.svg
