@@ -7,19 +7,64 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView:UITableView!
+    var repos:[JSON] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        getUserRepos()
+    }
+    
+    func getUserRepos() {
+        Alamofire.request(.GET, "https://api.github.com/users/gottsohn/repos").responseJSON {
+            (response) in
+            
+            switch response.result {
+            case .Success:
+                self.repos = JSON(data: response.data!).arrayValue
+                self.tableView.reloadData()
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let repo = repos[indexPath.row]
+        UIApplication.sharedApplication().openURL(NSURL(string: repo["clone_url"].stringValue)!)
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        
+        let repo = repos[indexPath.row]
+        
+        cell.textLabel?.text = repo["name"].stringValue
+        cell.detailTextLabel?.text = repo["language"].stringValue
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 }
 
