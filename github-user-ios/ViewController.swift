@@ -45,7 +45,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let repo = repos[indexPath.row]
-        UIApplication.sharedApplication().openURL(NSURL(string: repo["clone_url"].stringValue)!)
+        if let urlString = repo["clone_url"].string,
+            let url = NSURL(string: urlString) {
+            
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
