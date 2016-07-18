@@ -15,7 +15,6 @@
 		00A1C7C91D1EF54F005CA59F /* github_user_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1C7C81D1EF54F005CA59F /* github_user_iosTests.swift */; };
 		00A1C7D41D1EF54F005CA59F /* github_user_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A1C7D31D1EF54F005CA59F /* github_user_iosUITests.swift */; };
 		00A1C7E21D1EF711005CA59F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 00A1C7E11D1EF711005CA59F /* Podfile */; };
-		F051F7A4E413D7CC7CD53D1E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B856776B6C9B2238051EBC7 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		00A1C7D31D1EF54F005CA59F /* github_user_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_user_iosUITests.swift; sourceTree = "<group>"; };
 		00A1C7D51D1EF54F005CA59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00A1C7E11D1EF711005CA59F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2B856776B6C9B2238051EBC7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A58DE893465A2FD0C1CBB9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DE5E00B8B90B83C84857CB0A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F051F7A4E413D7CC7CD53D1E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +144,6 @@
 		6706290B2427D98AA9B39DFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B856776B6C9B2238051EBC7 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
